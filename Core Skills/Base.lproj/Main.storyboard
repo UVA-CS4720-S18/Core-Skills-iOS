@@ -47,26 +47,44 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4H0-zg-SfE">
                                         <rect key="frame" x="41.5" y="80.5" width="100" height="30"/>
                                         <state key="normal" title="Accelerometer"/>
+                                        <connections>
+                                            <segue destination="OdB-Lk-Zyc" kind="show" id="gPm-rU-rMO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRs-d3-smu">
                                         <rect key="frame" x="64.5" y="110.5" width="54" height="30"/>
                                         <state key="normal" title="Camera"/>
+                                        <connections>
+                                            <segue destination="wVI-DV-XFI" kind="show" id="KU7-bS-Zja"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05p-wv-5Lw">
                                         <rect key="frame" x="14" y="140.5" width="155" height="30"/>
                                         <state key="normal" title="Consume Web Service"/>
+                                        <connections>
+                                            <segue destination="WZ9-nJ-e0D" kind="show" id="ddu-6i-XVP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQs-to-NK0">
                                         <rect key="frame" x="0.0" y="170.5" width="183" height="30"/>
                                         <state key="normal" title="Consume Firebase Service"/>
+                                        <connections>
+                                            <segue destination="W6R-n9-U0a" kind="show" id="igR-m7-I74"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3e-jw-cJo">
                                         <rect key="frame" x="57" y="200.5" width="69" height="30"/>
                                         <state key="normal" title="Core Data"/>
+                                        <connections>
+                                            <segue destination="EdF-f2-fgL" kind="show" id="Li4-7e-buV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouW-bd-VZ5">
                                         <rect key="frame" x="46.5" y="230.5" width="90" height="30"/>
                                         <state key="normal" title="UserDefaults"/>
+                                        <connections>
+                                            <segue destination="UTn-dh-xnj" kind="show" id="2WE-I5-wxe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -82,6 +100,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1203.75" y="-45.422535211267608"/>
+        </scene>
+        <!--Web Service-->
+        <scene sceneID="MeQ-82-B9q">
+            <objects>
+                <viewController title="Web Service" id="WZ9-nJ-e0D" customClass="WebServiceViewController" customModule="Core_Skills" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yhQ-wn-2L9"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZSi-NY-z3O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xwh-gn-5bU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUW-ir-b73" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="322"/>
+        </scene>
+        <!--Core Data-->
+        <scene sceneID="j3o-xu-3hc">
+            <objects>
+                <viewController title="Core Data" id="EdF-f2-fgL" customClass="CoreDataViewController" customModule="Core_Skills" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UKe-kb-4N5"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Nh-fL-vM9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Ec-Z6-iYf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jt-M0-Vfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="989"/>
+        </scene>
+        <!--UserDefaults-->
+        <scene sceneID="uEr-DR-iSP">
+            <objects>
+                <viewController title="UserDefaults" id="UTn-dh-xnj" customClass="UserDefaultsViewController" customModule="Core_Skills" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fay-sE-4hI"/>
+                        <viewControllerLayoutGuide type="bottom" id="fk3-2w-zDO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aae-pd-Aan">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hl1-YC-gjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2811" y="989"/>
+        </scene>
+        <!--Firebase-->
+        <scene sceneID="0Vs-Is-tQK">
+            <objects>
+                <viewController title="Firebase" id="W6R-n9-U0a" customClass="FirebaseViewController" customModule="Core_Skills" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DLG-j7-k1W"/>
+                        <viewControllerLayoutGuide type="bottom" id="VJt-6a-RdO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Oh-UO-cgu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyY-Xv-mlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2811" y="321"/>
         </scene>
         <!--Shake-->
         <scene sceneID="TAQ-Ca-8y7">
@@ -160,6 +250,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLY-dh-o1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2044" y="-1057"/>
+        </scene>
+        <!--Accelerometer-->
+        <scene sceneID="5Kp-nf-Rsm">
+            <objects>
+                <viewController title="Accelerometer" id="OdB-Lk-Zyc" customClass="AccelerometerViewController" customModule="Core_Skills" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bwf-Fn-FWn"/>
+                        <viewControllerLayoutGuide type="bottom" id="b6a-6A-BNh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cph-q9-fj1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dS0-f3-qV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2811" y="-1057"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="SsC-uw-5aR">
+            <objects>
+                <viewController title="Camera" id="wVI-DV-XFI" customClass="CameraViewController" customModule="Core_Skills" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jFT-Ux-C7M"/>
+                        <viewControllerLayoutGuide type="bottom" id="q5B-mv-yLf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uXG-de-jHN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjv-0s-KPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2811" y="-365"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hFb-Ym-WIj">

@@ -12,6 +12,8 @@
 		0243D70A1E5CBF5900E2E1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0243D7081E5CBF5900E2E1B2 /* Main.storyboard */; };
 		0243D70C1E5CBF5900E2E1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0243D70B1E5CBF5900E2E1B2 /* Assets.xcassets */; };
 		0243D70F1E5CBF5900E2E1B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0243D70D1E5CBF5900E2E1B2 /* LaunchScreen.storyboard */; };
+		02A868AA1E5F7BB6000A48C5 /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A868A91E5F7BB6000A48C5 /* ShakeViewController.swift */; };
+		02A905011E5CDAF4006479C0 /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A905001E5CDAF4006479C0 /* GPSViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		0243D70B1E5CBF5900E2E1B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0243D70E1E5CBF5900E2E1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0243D7101E5CBF5900E2E1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02A868A91E5F7BB6000A48C5 /* ShakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
+		02A905001E5CDAF4006479C0 /* GPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				0243D70B1E5CBF5900E2E1B2 /* Assets.xcassets */,
 				0243D70D1E5CBF5900E2E1B2 /* LaunchScreen.storyboard */,
 				0243D7101E5CBF5900E2E1B2 /* Info.plist */,
+				02A905001E5CDAF4006479C0 /* GPSViewController.swift */,
+				02A868A91E5F7BB6000A48C5 /* ShakeViewController.swift */,
 			);
 			path = "Core Skills";
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0243D7071E5CBF5900E2E1B2 /* MainViewController.swift in Sources */,
+				02A905011E5CDAF4006479C0 /* GPSViewController.swift in Sources */,
 				0243D7051E5CBF5900E2E1B2 /* AppDelegate.swift in Sources */,
+				02A868AA1E5F7BB6000A48C5 /* ShakeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +310,7 @@
 				0243D7151E5CBF5900E2E1B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

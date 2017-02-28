@@ -5,6 +5,13 @@
 //  Created by sherriff on 2/23/17.
 //  Copyright © 2017 Mark Sherriff. All rights reserved.
 //
+//
+//  Assignment Notes: We have already provided the data model for
+//  you to use.  Make sure to look at CoreDAta.xcdatamodeld to see
+//  how things are being stored.  Your two buttons here should 1) save
+//  the data from the TextFields to CoreData and 2) load whatever is
+//  the last entry in CoreData into the Labels.  I would look here for info:
+//  https://www.raywenderlich.com/145809/getting-started-core-data-tutorial
 
 import UIKit
 import CoreData
@@ -17,7 +24,7 @@ class CoreDataViewController: UIViewController {
     @IBOutlet weak var compIDLabel: UILabel!
     
     @IBAction func saveData(_ sender: UIButton) {
-        
+        // --- Delete ---
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
@@ -44,12 +51,12 @@ class CoreDataViewController: UIViewController {
         } catch {
             
         }
-        
+        // --- End Delete ---
     }
     
     
     @IBAction func loadData(_ sender: UIButton) {
-        
+        // --- Delete ---
         let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
         
         guard let appDelegate =
@@ -77,7 +84,7 @@ class CoreDataViewController: UIViewController {
         } catch {
             print("Error with request: \(error)")
         }
-
+        // --- End Delete ---
     }
     
     override func viewDidLoad() {
@@ -85,9 +92,6 @@ class CoreDataViewController: UIViewController {
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CoreDataViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     func dismissKeyboard() {
@@ -97,9 +101,6 @@ class CoreDataViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
    
 }

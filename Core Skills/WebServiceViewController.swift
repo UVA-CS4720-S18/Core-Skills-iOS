@@ -10,7 +10,8 @@
 //  types of web updates are done off of the main thread.  Only
 //  the main thread can update the UI.  So we have a separate 
 //  button to update the UI.  Your code should populate the three
-//  placeholder variables.
+//  placeholder variables.  I would suggest looking at the information here:
+//  https://developer.apple.com/swift/blog/?id=37
 
 import UIKit
 

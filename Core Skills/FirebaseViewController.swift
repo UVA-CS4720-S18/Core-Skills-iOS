@@ -5,6 +5,11 @@
 //  Created by sherriff on 2/23/17.
 //  Copyright © 2017 Mark Sherriff. All rights reserved.
 //
+//
+//  Assignment Notes: Firebase manages the network connection
+//  separately so it is easier to update the UI than using the
+//  built-in functions.  I would suggest seeing the docs found at:
+//  https://firebase.google.com/docs/database/ios/read-and-write
 
 import UIKit
 import Firebase
@@ -59,8 +64,6 @@ class FirebaseViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FirebaseViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        
-        // Do any additional setup after loading the view.
     }
     
     func dismissKeyboard() {
@@ -68,12 +71,9 @@ class FirebaseViewController: UIViewController {
         view.endEditing(true)
     }
 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 
 
 }

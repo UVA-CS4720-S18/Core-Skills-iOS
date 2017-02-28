@@ -1,0 +1,6 @@
+framework module Pods_Core_Skills {
+  umbrella header "Pods-Core Skills-umbrella.h"
+
+  export *
+  module * { export * }
+}

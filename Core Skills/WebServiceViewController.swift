@@ -9,6 +9,73 @@
 import UIKit
 
 class WebServiceViewController: UIViewController {
+    
+    @IBOutlet weak var deptTextField: UITextField!
+    @IBOutlet weak var courseNameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var instructorLabel: UILabel!
+    
+    var courseName : String = ""
+    var instructor : String = ""
+    var location : String = ""
+    
+    @IBAction func updateView(_ sender: Any) {
+        courseNameLabel.text = courseName
+        instructorLabel.text = instructor
+        locationLabel.text = location
+    }
+    @IBAction func downloadData() {
+        
+        let userInput = deptTextField.text!
+        
+        let inputArray = userInput.characters.split { $0 == " " }
+        
+        let course = String(inputArray[0])
+        let num = String(inputArray[1])
+        
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        
+        let urlString = "http://stardock.cs.virginia.edu/louslist/Courses/view/" + course + "/" + num + "?json"
+        
+        let url = URL(string: urlString)!
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                do {
+                    
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+                    
+                    
+                    if let array = json as? [Any] {
+                        if let firstObject = array.first {
+                            if let dictionary = firstObject as? [String: Any] {
+                                self.courseName = (dictionary["courseName"] as? String)!
+                                self.instructor = (dictionary["instructor"] as? String)!
+                                self.location = (dictionary["location"] as? String)!
+                                
+                            }
+
+                        }
+                    }
+                    
+                    
+                    
+                    
+                    
+                } catch {
+                    print("error in JSONSerialization")
+                }
+            }
+        })
+        task.resume()
+        
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +89,5 @@ class WebServiceViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }

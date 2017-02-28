@@ -7,14 +7,57 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+
 
 class FirebaseViewController: UIViewController {
+    @IBOutlet weak var deptTextField: UITextField!
+    @IBOutlet weak var courseNameLabel: UILabel!
+    @IBOutlet weak var instructorLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
+    var courseName : String = ""
+    var instructor : String = ""
+    var location : String = ""
+    
+    @IBAction func loadFirebaseData() {
+        
+        let userInput = deptTextField.text!
+        
+        let inputArray = userInput.characters.split { $0 == " " }
+        
+        let course = String(inputArray[0])
+        let num = String(inputArray[1])
+
+        
+        let ref = FIRDatabase.database().reference()
+        ref.child(course + "/" + num).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            self.courseName = value?["courseName"] as? String ?? ""
+            self.instructor = value?["instructor"] as? String ?? ""
+            self.location = value?["location"] as? String ?? ""
+            
+            self.courseNameLabel.text = self.courseName
+            self.instructorLabel.text = self.instructor
+            self.locationLabel.text = self.location
+            
+            
+            print(self.courseName)
+            print(self.instructor)
+            print(self.location)
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -22,14 +65,5 @@ class FirebaseViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

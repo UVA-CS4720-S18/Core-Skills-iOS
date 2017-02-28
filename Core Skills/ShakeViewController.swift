@@ -6,9 +6,10 @@
 //  Copyright © 2017 Mark Sherriff. All rights reserved.
 //
 //
-//  Assignment Notes: For this feature, add code to the 
-//  motionEnded function to up the value of shakeCount by
-//  1 on each shake and then update the screen.
+//  Assignment Notes: For this feature, add a function called
+//  motionEnded that will increase the value of shakeCount by
+//  1 on each shake and then update the screen.  This funcion
+//  is an override for anything using CoreMotion.
 
 import UIKit
 import CoreMotion
@@ -20,16 +21,16 @@ class ShakeViewController: UIViewController {
     @IBOutlet weak var shakeLabel: UILabel!
     var shakeCount : Int = 0
     
-        // function to allow for detecting a shake
+    // ---- Delete -----
     override func motionEnded(_ motion: UIEventSubtype,
                               with: UIEvent?) {
-        // ---- Delete -----
+        
         shakeCount += 1
         shakeLabel.text = "Shake Count: " + String(shakeCount)
-        // ---- End Delete ----
         
         
     }
+    // ---- End Delete ----
     
     override func viewDidLoad() {
         super.viewDidLoad()

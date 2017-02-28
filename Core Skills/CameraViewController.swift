@@ -5,6 +5,9 @@
 //  Created by sherriff on 2/23/17.
 //  Copyright © 2017 Mark Sherriff. All rights reserved.
 //
+//
+//  Assignment Notes: I suggest following the tutorial found at
+//  http://www.techotopia.com/index.php/An_Example_Swift_iOS_8_iPhone_Camera_Application
 
 import UIKit
 import MobileCoreServices
@@ -15,7 +18,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     var newMedia: Bool?
     
     @IBAction func useCamera(_ sender: AnyObject) {
-        
+        // --- Delete ---
         if UIImagePickerController.isSourceTypeAvailable(
             UIImagePickerControllerSourceType.camera) {
             
@@ -31,10 +34,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                          completion: nil)
             newMedia = true
         }
+        // --- End Delete ---
     }
     
     @IBAction func useImageLibrary(_ sender: AnyObject) {
-        
+        // --- Delete ---
         if UIImagePickerController.isSourceTypeAvailable(
             UIImagePickerControllerSourceType.savedPhotosAlbum) {
             let imagePicker = UIImagePickerController()
@@ -48,8 +52,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                          completion: nil)
             newMedia = false
         }
+        // --- End Delete ---
     }
     
+    // --- Delete ---
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
@@ -91,16 +97,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
+    // --- End Delete ---
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

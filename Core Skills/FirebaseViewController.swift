@@ -10,6 +10,10 @@
 //  separately so it is easier to update the UI than using the
 //  built-in functions.  I would suggest seeing the docs found at:
 //  https://firebase.google.com/docs/database/ios/read-and-write
+//  The example database info can be found on the assignment page.
+//  There is only one entry in the database - CS 4720.  If you use
+//  the "child" notation, you'll need to use .child("CS/4720") to
+//  get this piece of data.
 
 import UIKit
 import Firebase
@@ -27,7 +31,7 @@ class FirebaseViewController: UIViewController {
     var location : String = ""
     
     @IBAction func loadFirebaseData() {
-        
+        // This will split the input from the user into an array.
         let userInput = deptTextField.text!
         
         let inputArray = userInput.characters.split { $0 == " " }
@@ -35,7 +39,7 @@ class FirebaseViewController: UIViewController {
         let course = String(inputArray[0])
         let num = String(inputArray[1])
 
-        
+        // --- Delete ---
         let ref = FIRDatabase.database().reference()
         ref.child(course + "/" + num).observeSingleEvent(of: .value, with: { (snapshot) in
             
@@ -56,7 +60,7 @@ class FirebaseViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
-        
+        // --- End Delete ---
     }
 
     override func viewDidLoad() {

@@ -461,20 +461,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lj7-4A-5aa">
-                                <rect key="frame" x="141.5" y="263.5" width="37.5" height="41"/>
+                                <rect key="frame" x="126.5" y="248.5" width="68" height="71"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lat: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skr-go-nQL">
-                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lon: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lp-Un-HEd">
-                                        <rect key="frame" x="0.0" y="20.5" width="37.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="68" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgb-DY-YlB">
+                                        <rect key="frame" x="0.0" y="41" width="68" height="30"/>
+                                        <state key="normal" title="Start GPS"/>
+                                        <connections>
+                                            <action selector="startGPS:" destination="wS3-4C-ztU" eventType="touchUpInside" id="kpn-vT-AZc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>

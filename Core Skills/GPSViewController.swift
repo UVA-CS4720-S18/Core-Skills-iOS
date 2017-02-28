@@ -6,7 +6,9 @@
 //  Copyright © 2017 Mark Sherriff. All rights reserved.
 //
 //
-//  Assignment Notes: 
+//  Assignment Notes: I have already added the needed permissions
+//  to the Info.plist file.  I suggest taking a look at:
+//  http://swiftdeveloperblog.com/code-examples/determine-users-current-location-example-in-swift/
 
 import UIKit
 import CoreLocation
@@ -17,10 +19,42 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var lat: UILabel!
     @IBOutlet weak var lon: UILabel!
+    
+    func createLocationManager(startImmediately: Bool){
+        // Add code to start the locationManager
+        // --- Delete ---
+        locationManager = CLLocationManager()
+        if let manager = locationManager{
+            print("Successfully created the location manager")
+            manager.delegate = self
+            if startImmediately{
+                manager.startUpdatingLocation()
+            }
+        }
+        // --- End Delete ---
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // Code here is called when the location updates
+        // --- Delete ---
+        if locations.count == 0{
+            //handle error here
+            return
+        }
+        
+        let newLocation = locations[0]
+        
+        print("Latitude = \(newLocation.coordinate.latitude)")
+        print("Longitude = \(newLocation.coordinate.longitude)")
+        lat.text = String(newLocation.coordinate.latitude)
+        lon.text = String(newLocation.coordinate.longitude)
+        // --- End Delete ---
+    }
 
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+
+    @IBAction func startGPS(_ sender: UIButton) {
+        // Helper function provided to manage authorization - no edits needed.
         
         /* Are location services available on this device? */
         if CLLocationManager.locationServicesEnabled(){
@@ -31,7 +65,7 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
                 /* Yes, always */
                 createLocationManager(startImmediately: true)
             case .authorizedWhenInUse:
-                /* Yes, only when our app is in use */
+                /* Yes, only when our app is in use  */
                 createLocationManager(startImmediately: true)
             case .denied:
                 /* No */
@@ -57,30 +91,18 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
              user to enable the location services */
             print("Location services are not enabled")
         }
+
     }
+
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    
-        if locations.count == 0{
-            //handle error here
-            return
-        }
-    
-        let newLocation = locations[0]
-    
-        print("Latitude = \(newLocation.coordinate.latitude)")
-        print("Longitude = \(newLocation.coordinate.longitude)")
-        lat.text = String(newLocation.coordinate.latitude)
-        lon.text = String(newLocation.coordinate.longitude)
-    
-    }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
+        // Code here is called on an error - no edits needed.
         print("Location manager failed with error = \(error)")
     }
     
     private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-    
+        // Code here is called when authoization changes - no edits needed.
         print("The authorization status of location services is changed to: ", terminator: "")
     
         switch CLLocationManager.authorizationStatus(){
@@ -97,20 +119,9 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
         }
     
     }
-
-    
-    func createLocationManager(startImmediately: Bool){
-        locationManager = CLLocationManager()
-        if let manager = locationManager{
-            print("Successfully created the location manager")
-            manager.delegate = self
-            if startImmediately{
-                manager.startUpdatingLocation()
-            }
-        }
-    }
     
     func displayAlertWithTitle(title: String, message: String){
+        // Helper function for displaying dialog windows - no edits needed.
         let controller = UIAlertController(title: title,
                                            message: message,
                                            preferredStyle: .alert)
@@ -122,6 +133,12 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
         present(controller, animated: true, completion: nil)
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

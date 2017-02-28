@@ -27,15 +27,14 @@ class WebServiceViewController: UIViewController {
     var location : String = ""
     
     @IBAction func downloadData() {
-        
-        // --- Delete ---
+        // This will split the input from the user into an array.
         let userInput = deptTextField.text!
         
         let inputArray = userInput.characters.split { $0 == " " }
         
         let course = String(inputArray[0])
         let num = String(inputArray[1])
-        
+        // --- Delete ---
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
         

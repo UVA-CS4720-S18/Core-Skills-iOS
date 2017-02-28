@@ -5,6 +5,13 @@
 //  Created by sherriff on 2/23/17.
 //  Copyright © 2017 Mark Sherriff. All rights reserved.
 //
+//
+//  Assignment Notes: To make this simpler and to not have
+//  to deal with UI updates, your code in startAccel should
+//  only update the xDir, yDir, and zDir Double values whenever
+//  the accelerometer changes.  checkDeviceRotation will copy
+//  the current values of the variables to the labels when
+//  called.
 
 import UIKit
 import CoreMotion
@@ -23,6 +30,7 @@ class AccelerometerViewController: UIViewController {
     @IBOutlet weak var zLabel: UILabel!
     
     @IBAction func startAccel(sender: UIButton) {
+        // --- Delete ---
         if motionManager.isAccelerometerAvailable{
             motionManager.accelerometerUpdateInterval = 0.1
             let queue = OperationQueue()
@@ -46,6 +54,7 @@ class AccelerometerViewController: UIViewController {
         } else {
             print("Accelerometer is not available")
         }
+        // --- End Delete --- 
     }
     
     @IBAction func checkDeviceRotation(sender: UIButton) {
@@ -55,19 +64,13 @@ class AccelerometerViewController: UIViewController {
         
     }
 
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
-
-   
 }

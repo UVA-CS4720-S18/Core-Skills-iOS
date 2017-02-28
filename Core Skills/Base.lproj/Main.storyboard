@@ -117,7 +117,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4xv-co-zTs">
                                 <rect key="frame" x="16" y="208.5" width="288" height="151.5"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dC-oF-gp2">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CS 1111" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dC-oF-gp2">
                                         <rect key="frame" x="20" y="0.0" width="248" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -192,8 +192,73 @@
                     <view key="view" contentMode="scaleToFill" id="0Ec-Z6-iYf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Nv-m6-4jm">
+                                <rect key="frame" x="16" y="203.5" width="288" height="161"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sally Smith" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v6P-33-dM7">
+                                        <rect key="frame" x="20" y="0.0" width="248" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sss5s" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zy1-8w-ca8">
+                                        <rect key="frame" x="20" y="30" width="248" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVD-B8-BVw">
+                                        <rect key="frame" x="121.5" y="60" width="45" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computing ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrY-CV-KQq">
+                                        <rect key="frame" x="91.5" y="80.5" width="105" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM9-hl-Gby">
+                                        <rect key="frame" x="109.5" y="101" width="69" height="30"/>
+                                        <state key="normal" title="Save Data"/>
+                                        <connections>
+                                            <action selector="saveData:" destination="UTn-dh-xnj" eventType="touchUpInside" id="8wT-te-1zu"/>
+                                            <action selector="saveData:" destination="EdF-f2-fgL" eventType="touchUpInside" id="DEJ-fv-bLy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suy-nB-oRw">
+                                        <rect key="frame" x="109" y="131" width="70" height="30"/>
+                                        <state key="normal" title="Load Data"/>
+                                        <connections>
+                                            <action selector="loadData:" destination="EdF-f2-fgL" eventType="touchUpInside" id="ahm-FN-b14"/>
+                                            <action selector="loadData:" destination="UTn-dh-xnj" eventType="touchUpInside" id="izc-Qw-VTm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="v6P-33-dM7" firstAttribute="leading" secondItem="5Nv-m6-4jm" secondAttribute="leading" constant="20" symbolic="YES" id="8Ok-2Q-aLd"/>
+                                    <constraint firstItem="Zy1-8w-ca8" firstAttribute="leading" secondItem="5Nv-m6-4jm" secondAttribute="leading" constant="20" symbolic="YES" id="Zl5-Ff-0Gm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zy1-8w-ca8" secondAttribute="trailing" constant="20" symbolic="YES" id="cOh-tZ-Joh"/>
+                                    <constraint firstAttribute="trailing" secondItem="v6P-33-dM7" secondAttribute="trailing" constant="20" symbolic="YES" id="sBo-cp-tFW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Nv-m6-4jm" firstAttribute="leading" secondItem="0Ec-Z6-iYf" secondAttribute="leadingMargin" id="BQU-Tb-xVJ"/>
+                            <constraint firstItem="5Nv-m6-4jm" firstAttribute="centerX" secondItem="0Ec-Z6-iYf" secondAttribute="centerX" id="I4I-f5-UnV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Nv-m6-4jm" secondAttribute="trailing" id="dqs-cM-ujf"/>
+                            <constraint firstItem="5Nv-m6-4jm" firstAttribute="centerY" secondItem="0Ec-Z6-iYf" secondAttribute="centerY" id="iNm-Ea-2Zn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="compIDLabel" destination="xrY-CV-KQq" id="720-L1-i7L"/>
+                        <outlet property="compIDTextField" destination="Zy1-8w-ca8" id="h11-n8-GME"/>
+                        <outlet property="nameLabel" destination="iVD-B8-BVw" id="pcB-nT-Nve"/>
+                        <outlet property="nameTextField" destination="v6P-33-dM7" id="Rtg-3T-h1I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jt-M0-Vfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -210,8 +275,71 @@
                     <view key="view" contentMode="scaleToFill" id="aae-pd-Aan">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K0e-Wc-1FM">
+                                <rect key="frame" x="16" y="203.5" width="288" height="161"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sally Smith" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gng-mm-06M">
+                                        <rect key="frame" x="20" y="0.0" width="248" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sss5s" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nby-BO-xBu">
+                                        <rect key="frame" x="20" y="30" width="248" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s66-T4-8Fx">
+                                        <rect key="frame" x="121.5" y="60" width="45" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computing ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3F-fJ-j7l">
+                                        <rect key="frame" x="91.5" y="80.5" width="105" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-Xv-eew">
+                                        <rect key="frame" x="109.5" y="101" width="69" height="30"/>
+                                        <state key="normal" title="Save Data"/>
+                                        <connections>
+                                            <action selector="saveData:" destination="UTn-dh-xnj" eventType="touchUpInside" id="sbD-7q-pNA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPZ-01-clt">
+                                        <rect key="frame" x="109" y="131" width="70" height="30"/>
+                                        <state key="normal" title="Load Data"/>
+                                        <connections>
+                                            <action selector="loadData:" destination="UTn-dh-xnj" eventType="touchUpInside" id="ghN-k5-Y8L"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gng-mm-06M" secondAttribute="trailing" constant="20" symbolic="YES" id="er4-gB-vAz"/>
+                                    <constraint firstItem="Gng-mm-06M" firstAttribute="leading" secondItem="K0e-Wc-1FM" secondAttribute="leading" constant="20" symbolic="YES" id="l9t-9M-jQF"/>
+                                    <constraint firstAttribute="trailing" secondItem="nby-BO-xBu" secondAttribute="trailing" constant="20" symbolic="YES" id="m3b-bT-FBw"/>
+                                    <constraint firstItem="nby-BO-xBu" firstAttribute="leading" secondItem="K0e-Wc-1FM" secondAttribute="leading" constant="20" symbolic="YES" id="n35-vS-Y9R"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="K0e-Wc-1FM" secondAttribute="trailing" id="Jhz-cD-4OY"/>
+                            <constraint firstItem="K0e-Wc-1FM" firstAttribute="centerX" secondItem="aae-pd-Aan" secondAttribute="centerX" id="L5K-Jm-MBo"/>
+                            <constraint firstItem="K0e-Wc-1FM" firstAttribute="leading" secondItem="aae-pd-Aan" secondAttribute="leadingMargin" id="TtE-Dt-DZZ"/>
+                            <constraint firstItem="K0e-Wc-1FM" firstAttribute="centerY" secondItem="aae-pd-Aan" secondAttribute="centerY" id="uak-wf-Svq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="compIDLabel" destination="e3F-fJ-j7l" id="ciL-v4-in0"/>
+                        <outlet property="compIDTextField" destination="nby-BO-xBu" id="AyI-y0-jmE"/>
+                        <outlet property="nameLabel" destination="s66-T4-8Fx" id="yJM-qL-MVb"/>
+                        <outlet property="nameTextField" destination="Gng-mm-06M" id="HlC-1q-HK2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hl1-YC-gjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

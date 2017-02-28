@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021220481E65F197008E600C /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 021220451E65F06B008E600C /* CoreData.xcdatamodeld */; };
 		0215BBF51E653A4D00BD7081 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0215BBF41E653A4D00BD7081 /* GoogleService-Info.plist */; };
 		0243D7051E5CBF5900E2E1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243D7041E5CBF5900E2E1B2 /* AppDelegate.swift */; };
 		0243D7071E5CBF5900E2E1B2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243D7061E5CBF5900E2E1B2 /* MainViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021220461E65F06B008E600C /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		0215BBF41E653A4D00BD7081 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0243D7011E5CBF5900E2E1B2 /* Core Skills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core Skills.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0243D7041E5CBF5900E2E1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				02A868B11E5F8151000A48C5 /* FirebaseViewController.swift */,
 				02A868B31E5F815C000A48C5 /* CoreDataViewController.swift */,
 				02A868B51E5F8168000A48C5 /* UserDefaultsViewController.swift */,
+				021220451E65F06B008E600C /* CoreData.xcdatamodeld */,
 			);
 			path = "Core Skills";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				02A868B41E5F815C000A48C5 /* CoreDataViewController.swift in Sources */,
 				02A868B01E5F813F000A48C5 /* WebServiceViewController.swift in Sources */,
 				02A868AC1E5F8111000A48C5 /* AccelerometerViewController.swift in Sources */,
+				021220481E65F197008E600C /* CoreData.xcdatamodeld in Sources */,
 				0243D7071E5CBF5900E2E1B2 /* MainViewController.swift in Sources */,
 				02A905011E5CDAF4006479C0 /* GPSViewController.swift in Sources */,
 				0243D7051E5CBF5900E2E1B2 /* AppDelegate.swift in Sources */,
@@ -418,6 +422,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		021220451E65F06B008E600C /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				021220461E65F06B008E600C /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 021220461E65F06B008E600C /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0243D6F91E5CBF5900E2E1B2 /* Project object */;
 }

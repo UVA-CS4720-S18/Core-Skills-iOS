@@ -9,11 +9,39 @@
 import UIKit
 
 class UserDefaultsViewController: UIViewController {
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var compIDTextField: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var compIDLabel: UILabel!
+    @IBAction func saveData(_ sender: UIButton) {
+        
+        UserDefaults.standard.set(nameTextField.text, forKey: "name")
+        UserDefaults.standard.set(compIDTextField.text, forKey: "compID")
+    }
+    @IBAction func loadData(_ sender: UIButton) {
+        let name = UserDefaults.standard.string(forKey: "name")
+        let compID = UserDefaults.standard.string(forKey: "compID")
+        
+        nameLabel.text = name!
+        compIDLabel.text = compID!
+    
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UserDefaultsViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +49,5 @@ class UserDefaultsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

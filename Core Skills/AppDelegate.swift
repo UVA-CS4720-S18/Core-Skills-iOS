@@ -5,6 +5,10 @@
 //  Created by sherriff on 2/21/17.
 //  Copyright © 2017 Mark Sherriff. All rights reserved.
 //
+//
+//  Assignment Notes: Some code was added here for the Core Data
+//  part of the assignment.  You do not have to edit or add any
+//  code here.
 
 import UIKit
 import Firebase

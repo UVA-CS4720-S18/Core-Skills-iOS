@@ -5,6 +5,8 @@
 //  Created by sherriff on 2/21/17.
 //  Copyright © 2017 Mark Sherriff. All rights reserved.
 //
+//
+//  Assignment Notes: 
 
 import UIKit
 import CoreLocation
@@ -16,17 +18,6 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var lat: UILabel!
     @IBOutlet weak var lon: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -130,6 +121,14 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
         
         present(controller, animated: true, completion: nil)
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 
 

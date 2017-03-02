@@ -19,20 +19,12 @@ class UserDefaultsViewController: UIViewController {
     @IBOutlet weak var compIDTextField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var compIDLabel: UILabel!
+    
     @IBAction func saveData(_ sender: UIButton) {
-        // --- Delete ---
-        UserDefaults.standard.set(nameTextField.text, forKey: "name")
-        UserDefaults.standard.set(compIDTextField.text, forKey: "compID")
-        // --- End Delete ---
+        // Add your code here
     }
     @IBAction func loadData(_ sender: UIButton) {
-        // --- Delete ---
-        let name = UserDefaults.standard.string(forKey: "name")
-        let compID = UserDefaults.standard.string(forKey: "compID")
-        
-        nameLabel.text = name!
-        compIDLabel.text = compID!
-        // --- End Delete ---
+        // Add your code here
         
     }
     

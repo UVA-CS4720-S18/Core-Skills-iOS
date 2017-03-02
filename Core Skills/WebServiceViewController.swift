@@ -34,52 +34,12 @@ class WebServiceViewController: UIViewController {
         
         let course = String(inputArray[0])
         let num = String(inputArray[1])
-        // --- Delete ---
-        let config = URLSessionConfiguration.default // Session Configuration
-        let session = URLSession(configuration: config) // Load configuration into Session
-        
-        let urlString = "http://stardock.cs.virginia.edu/louslist/Courses/view/" + course + "/" + num + "?json"
-        
-        let url = URL(string: urlString)!
-        
-        let task = session.dataTask(with: url, completionHandler: {
-            (data, response, error) in
-            
-            if error != nil {
-                print(error!.localizedDescription)
-            } else {
-                do {
-                    
-                    let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                    
-                    
-                    if let array = json as? [Any] {
-                        if let firstObject = array.first {
-                            if let dictionary = firstObject as? [String: Any] {
-                                self.courseName = (dictionary["courseName"] as? String)!
-                                self.instructor = (dictionary["instructor"] as? String)!
-                                self.location = (dictionary["location"] as? String)!
-                                
-                            }
 
-                        }
-                    }
-                    
-                    
-                    
-                    
-                    
-                } catch {
-                    print("error in JSONSerialization")
-                }
-            }
-        })
-        task.resume()
-        // --- End Delete ---
-
+        // Add your code here
     }
     
     @IBAction func updateView(_ sender: Any) {
+        // Helper function to update the screen.  No edits needed.
         courseNameLabel.text = courseName
         instructorLabel.text = instructor
         locationLabel.text = location

@@ -39,28 +39,8 @@ class FirebaseViewController: UIViewController {
         let course = String(inputArray[0])
         let num = String(inputArray[1])
 
-        // --- Delete ---
-        let ref = FIRDatabase.database().reference()
-        ref.child(course + "/" + num).observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            let value = snapshot.value as? NSDictionary
-            self.courseName = value?["courseName"] as? String ?? ""
-            self.instructor = value?["instructor"] as? String ?? ""
-            self.location = value?["location"] as? String ?? ""
-            
-            self.courseNameLabel.text = self.courseName
-            self.instructorLabel.text = self.instructor
-            self.locationLabel.text = self.location
-            
-            
-            print(self.courseName)
-            print(self.instructor)
-            print(self.location)
-            
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-        // --- End Delete ---
+        // Add your code here    
+    
     }
 
     override func viewDidLoad() {

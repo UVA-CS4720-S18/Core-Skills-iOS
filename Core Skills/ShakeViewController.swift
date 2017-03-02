@@ -21,16 +21,7 @@ class ShakeViewController: UIViewController {
     @IBOutlet weak var shakeLabel: UILabel!
     var shakeCount : Int = 0
     
-    // ---- Delete -----
-    override func motionEnded(_ motion: UIEventSubtype,
-                              with: UIEvent?) {
-        
-        shakeCount += 1
-        shakeLabel.text = "Shake Count: " + String(shakeCount)
-        
-        
-    }
-    // ---- End Delete ----
+    // Add your motionEnded function here
     
     override func viewDidLoad() {
         super.viewDidLoad()

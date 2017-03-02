@@ -22,33 +22,11 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
     
     func createLocationManager(startImmediately: Bool){
         // Add code to start the locationManager
-        // --- Delete ---
-        locationManager = CLLocationManager()
-        if let manager = locationManager{
-            print("Successfully created the location manager")
-            manager.delegate = self
-            if startImmediately{
-                manager.startUpdatingLocation()
-            }
-        }
-        // --- End Delete ---
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // Add your code here
         // Code here is called when the location updates
-        // --- Delete ---
-        if locations.count == 0{
-            //handle error here
-            return
-        }
-        
-        let newLocation = locations[0]
-        
-        print("Latitude = \(newLocation.coordinate.latitude)")
-        print("Longitude = \(newLocation.coordinate.longitude)")
-        lat.text = String(newLocation.coordinate.latitude)
-        lon.text = String(newLocation.coordinate.longitude)
-        // --- End Delete ---
     }
 
 

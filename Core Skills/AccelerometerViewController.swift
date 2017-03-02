@@ -30,34 +30,11 @@ class AccelerometerViewController: UIViewController {
     @IBOutlet weak var zLabel: UILabel!
     
     @IBAction func startAccel(sender: UIButton) {
-        // --- Delete ---
-        if motionManager.isAccelerometerAvailable{
-            motionManager.accelerometerUpdateInterval = 0.1
-            let queue = OperationQueue()
-            motionManager.startAccelerometerUpdates(to: queue, withHandler:
-                {data, error in
-                    
-                    guard let data = data else{
-                        return
-                    }
-                    
-                    print("X = \(data.acceleration.x)")
-                    print("Y = \(data.acceleration.y)")
-                    print("Z = \(data.acceleration.z)")
-                    self.xDir = data.acceleration.x
-                    self.yDir = data.acceleration.y
-                    self.zDir = data.acceleration.z
-
-                    
-            }
-            )
-        } else {
-            print("Accelerometer is not available")
-        }
-        // --- End Delete --- 
+        // Add your code here
     }
     
     @IBAction func checkDeviceRotation(sender: UIButton) {
+        // Helper function to update the screen.  No edits needed.
         xLabel.text = "X = " + String(xDir)
         yLabel.text = "Y = " + String(yDir)
         zLabel.text = "Z = " + String(zDir)

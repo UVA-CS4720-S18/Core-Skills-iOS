@@ -34,7 +34,7 @@ class FirebaseViewController: UIViewController {
         // This will split the input from the user into an array.
         let userInput = deptTextField.text!
         
-        let inputArray = userInput.characters.split { $0 == " " }
+        let inputArray = userInput.split { $0 == " " }
         
         let course = String(inputArray[0])
         let num = String(inputArray[1])
